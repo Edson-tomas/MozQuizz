@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizzCategoryActivity"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_math_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_math"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_port_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_port"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_chemistry_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_chemistry"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_physique_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_physique"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_geography_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_geography"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_history_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_history"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_biology_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_biology"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/id_category_computer_science_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_category_computer_science"/>
+
+    </LinearLayout>
+
+</LinearLayout>

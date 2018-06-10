@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MozQuizz</string>
+    <string name="str_universal_zero">0</string>
+    <string name="str_universal_slash">/</string>
+    <string name="str_category_math">Mathematic</string>
+    <string name="str_category_port">Portuguese</string>
+    <string name="str_category_chemistry">Chemistry</string>
+    <string name="str_category_physique">Physique</string>
+    <string name="str_category_geography">Geography</string>
+    <string name="str_category_history">History</string>
+    <string name="str_category_computer_science">Computer Science</string>
+    <string name="str_category_biology">Biology</string>
+    <string-array name="quizz_category">
+        <item>Mathematics</item>
+        <item>History</item>
+    </string-array>
+</resources>
