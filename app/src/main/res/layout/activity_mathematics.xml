@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MathematicActivity">
+    tools:context=".MathematicsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,44 +15,44 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingRight="8dp"
             android:text="Progress:"
-            android:textSize="24sp"
-            android:paddingRight="8dp"/>
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/id_math_tracking_question_answered_txt_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_universal_zero"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_universal_slash"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/id_math_tracking_total_question_txt_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_universal_zero"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Points:"
-            android:textSize="24sp"
             android:paddingLeft="8dp"
-            android:paddingRight="8dp"/>
+            android:paddingRight="8dp"
+            android:text="Points:"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/id_math_tracking_points_txt_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_universal_zero"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
     </LinearLayout>
 

@@ -4,9 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
 import java.util.List;
 
-public class MathematicActivity extends AppCompatActivity {
+public class MathematicsActivity extends AppCompatActivity {
 
     public List<Quizz> questionList;
     private int i = 0;
@@ -15,11 +16,11 @@ public class MathematicActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mathematic);
+        setContentView(R.layout.activity_mathematics);
     }
 
 
-    public void trackingBar(int amountQuestionAnswered, int amountOfQuestion, int amountOfpoints){
+    public void trackingBar(int amountQuestionAnswered, int amountOfQuestion, int amountOfpoints) {
 
         TextView tracking_question_answered, tracking_total_question, tracking_points;
 
@@ -35,36 +36,38 @@ public class MathematicActivity extends AppCompatActivity {
     }
 
 
-    public void displayQuizz(int index){
+    public void displayQuizz(int index) {
 
         int totalAmountOfQuestion = questionList.size();
         int totalQuestionAnswered = index;
 
         trackingBar(totalQuestionAnswered, totalAmountOfQuestion, totalPoints);
 
-        String option = "";
+        String option = "Mathematics";
 
-        if(questionList.get(index).getQuestionCategory().equalsIgnoreCase("Physics")){
+        if (questionList.get(index).getQuestionCategory().equalsIgnoreCase(option)) {
+
+            displayQuestion(questionList.get(index).getQuestion());
+            displayFirstAnswer(questionList.get(index).getAnswer_1());
+            displaySecondAnswer(questionList.get(index).getAnswer_2());
+            displayThirdAnswer(questionList.get(index).getAnswer_3());
+            displayFourthAnswer(questionList.get(index).getAnswer_4());
 
         }
-        displayQuestion(questionList.get(index).getQuestion());
-        displayFirstAnswer(questionList.get(index).getAnswer_1());
-        displaySecondAnswer(questionList.get(index).getAnswer_2());
-        displayThirdAnswer(questionList.get(index).getAnswer_3());
-        displayFourthAnswer(questionList.get(index).getAnswer_4());
+
 
     }
 
-    public void answerOne(View view){
+    public void answerOne(View view) {
 
-        if(questionList.get(i).getForAnswer_1()){
+        if (questionList.get(i).getForAnswer_1()) {
 
             displayResults("Certo");
             i++;
             totalPoints = totalPoints + 5;
             displayQuizz(i);
 
-        }else{
+        } else {
 
             displayResults("Errado");
 
@@ -72,19 +75,19 @@ public class MathematicActivity extends AppCompatActivity {
 
     }
 
-    public void answerTwo(View view){
+    public void answerTwo(View view) {
 
         //createQuizz(quizzList);
 
 
-        if(questionList.get(i).getForAnswer_2()){
+        if (questionList.get(i).getForAnswer_2()) {
 
             displayResults("Certo");
             i++;
             totalPoints = totalPoints + 5;
             displayQuizz(i);
 
-        }else{
+        } else {
 
             displayResults("Errado");
 
@@ -92,19 +95,19 @@ public class MathematicActivity extends AppCompatActivity {
 
     }
 
-    public void answerThree(View view){
+    public void answerThree(View view) {
 
         //createQuizz(quizzList);
 
 
-        if(questionList.get(i).getForAnswer_3()){
+        if (questionList.get(i).getForAnswer_3()) {
 
             displayResults("Certo");
             i++;
             totalPoints = totalPoints + 5;
             displayQuizz(i);
 
-        }else{
+        } else {
 
             displayResults("Errado");
 
@@ -112,19 +115,19 @@ public class MathematicActivity extends AppCompatActivity {
 
     }
 
-    public void answerFour(View view){
+    public void answerFour(View view) {
 
         //createQuizz(quizzList);
 
 
-        if(questionList.get(i).getForAnswer_4()){
+        if (questionList.get(i).getForAnswer_4()) {
 
             displayResults("Certo");
             i++;
             totalPoints = totalPoints + 5;
             displayQuizz(i);
 
-        }else{
+        } else {
 
             displayResults("Errado");
 
@@ -132,35 +135,35 @@ public class MathematicActivity extends AppCompatActivity {
 
     }
 
-    public void displayQuestion(String result){
+    public void displayQuestion(String result) {
 
         TextView id_question = findViewById(R.id.id_math_question_txt_view);
         id_question.setText(result);
 
     }
 
-    public void displayFirstAnswer(String result){
+    public void displayFirstAnswer(String result) {
 
         TextView id_first_answer = findViewById(R.id.id_math_first_answer_txt_view);
         id_first_answer.setText(result);
 
     }
 
-    public void displaySecondAnswer(String result){
+    public void displaySecondAnswer(String result) {
 
         TextView id_second_answer = findViewById(R.id.id_math_second_answer_txt_view);
         id_second_answer.setText(result);
 
     }
 
-    public void displayThirdAnswer(String result){
+    public void displayThirdAnswer(String result) {
 
         TextView id_third_answer = findViewById(R.id.id_math_third_answer_txt_view);
         id_third_answer.setText(result);
 
     }
 
-    public void displayFourthAnswer(String result){
+    public void displayFourthAnswer(String result) {
 
         TextView id_fourth_answer = findViewById(R.id.id_math_fourth_answer_txt_view);
         id_fourth_answer.setText(result);
@@ -168,7 +171,7 @@ public class MathematicActivity extends AppCompatActivity {
     }
 
 
-    public void displayResults(String result){
+    public void displayResults(String result) {
 
         TextView id_display_result = findViewById(R.id.id_math_display_result_txt_view);
         id_display_result.setText(result);

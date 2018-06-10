@@ -18,9 +18,17 @@
         </activity>
         <activity android:name=".QuizzCategoryActivity" />
         <activity android:name=".QuizzRankActivity" />
-        <activity android:name=".AddingQuestionActivity"></activity>
+        <activity android:name=".AddingQuestionActivity" />
         <activity android:name=".FirstPageActivity" />
-        <activity android:name=".MathematicActivity"></activity>
+        <activity android:name=".MathematicsActivity" />
+        <activity android:name=".PhysicsActivity" />
+        <activity android:name=".BiologyActivity" />
+        <activity android:name=".PortugueseActivity" />
+        <activity android:name=".EnglishActivity" />
+        <activity android:name=".ChemistryActivity" />
+        <activity android:name=".ComputerScienceActivity" />
+        <activity android:name=".GeographyActivity" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>

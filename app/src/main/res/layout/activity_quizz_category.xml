@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizzCategoryActivity"
     android:orientation="vertical"
+    android:padding="4dp"
     android:weightSum="8"
-    android:padding="4dp">
+    tools:context=".QuizzCategoryActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_math_btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_math"/>
+            android:onClick="onMathCategoryClick"
+            android:text="@string/str_category_math" />
 
     </LinearLayout>
 
@@ -27,11 +28,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_port_txt_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_port"/>
+            android:onClick="onPortugueseCategoryClick"
+            android:text="@string/str_category_port" />
 
     </LinearLayout>
 
@@ -40,11 +42,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_chemistry_txt_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_chemistry"/>
+            android:onClick="onChemistryCategoryClick"
+            android:text="@string/str_category_chemistry" />
 
     </LinearLayout>
 
@@ -53,11 +56,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_physique_txt_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_physique"/>
+            android:onClick="onPhysicsCategoryClick"
+            android:text="@string/str_category_physique" />
 
     </LinearLayout>
 
@@ -66,11 +70,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_geography_txt_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_geography"/>
+            android:onClick="onGeographyCategoryClick"
+            android:text="@string/str_category_geography" />
 
     </LinearLayout>
 
@@ -79,11 +84,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_history_txt_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_history"/>
+            android:onClick="onHistoryCategoryClick"
+            android:text="@string/str_category_history" />
 
     </LinearLayout>
 
@@ -92,11 +98,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_biology_txt_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_biology"/>
+            android:onClick="onBiologyCategoryClick"
+            android:text="@string/str_category_biology" />
 
     </LinearLayout>
 
@@ -105,11 +112,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
+        <TextView
             android:id="@+id/id_category_computer_science_txt_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/str_category_computer_science"/>
+            android:onClick="onComputerScienceCategoryClick"
+            android:text="@string/str_category_computer_science" />
 
     </LinearLayout>
 

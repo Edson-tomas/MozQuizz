@@ -1,5 +1,6 @@
 package com.example.etomas.mozquizz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class QuizzCategoryActivity extends AppCompatActivity {
 
-    private List<Quizz> quizzList= new ArrayList<>();
+    private List<Quizz> quizzList = new ArrayList<>();
     private List<QuizzCategory> categoriesList = new ArrayList<>();
     private int i = 0;
     private int totalPoints = 0;
@@ -22,51 +23,59 @@ public class QuizzCategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quizz_category);
     }
 
-    public void mathCategory(View view){
+    public void onMathCategoryClick(View view) {
 
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
-
-    }
-
-    public void portCategory(View view){
-
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
 
     }
 
-    public void chemistryCategory(View view){
+    public void onPortugueseCategoryClick(View view) {
 
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
-
-    }
-
-    public void physiqueCategory(View view){
-
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
 
     }
 
-    public void geographyCategory(View view){
+    public void onChemistryCategoryClick(View view) {
 
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
-
-    }
-
-    public void biologyCategory(View view){
-
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
 
     }
 
-    public void computerScienceCategory(View view){
+    public void onPhysicsCategoryClick(View view) {
 
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
 
     }
 
-    public void historyCategory(View view){
+    public void onGeographyCategoryClick(View view) {
 
-        //deve inicializar o jogo somente com perguntas da categoria de matematica;
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
+
+    }
+
+    public void onBiologyCategoryClick(View view) {
+
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
+
+    }
+
+    public void onComputerScienceCategoryClick(View view) {
+
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
+
+    }
+
+    public void onHistoryCategoryClick(View view) {
+
+        Intent activityIntent = new Intent(this, MathematicsActivity.class);
+        startActivity(activityIntent);
 
     }
 

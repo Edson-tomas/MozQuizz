@@ -44,7 +44,7 @@ public class Quizz {
         this.forAnswer_4 = forAnswer_4;
     }
 
-    public Quizz (String question, String answer_1, String answer_2, String answer_3, String answer_4){
+    public Quizz(String question, String answer_1, String answer_2, String answer_3, String answer_4) {
 
         this.question = question;
         this.answer_1 = answer_1;

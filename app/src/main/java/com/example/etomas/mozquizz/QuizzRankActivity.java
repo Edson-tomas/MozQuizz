@@ -25,36 +25,36 @@ public class QuizzRankActivity extends AppCompatActivity {
     }
 
     //TODO how to add this layout to an xml file
-    public void newMotherLinearViewGroup(){
+    public void newMotherLinearViewGroup() {
 
-        LinearLayout newLinearLayout =  new LinearLayout(this);
+        LinearLayout newLinearLayout = new LinearLayout(this);
         setContentView(newLinearLayout);
         LinearLayout.LayoutParams newLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
         newLinearLayout.setOrientation(LinearLayout.VERTICAL);
 
-        for (int index =0; index>=playerRankingList.size(); index++){
-            newLinearLayout.addView(newChildLinearViewGroup(index),newLayoutParams);
+        for (int index = 0; index >= playerRankingList.size(); index++) {
+            newLinearLayout.addView(newChildLinearViewGroup(index), newLayoutParams);
         }
 
     }
 
     //creation of a linearlayout that will return a view that contain two TextViews playerName e playerPoints
-    public View newChildLinearViewGroup(int index){
+    public View newChildLinearViewGroup(int index) {
 
-        LinearLayout newLinearLayout =  new LinearLayout(this);
+        LinearLayout newLinearLayout = new LinearLayout(this);
         setContentView(newLinearLayout);
         LinearLayout.LayoutParams newLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
         newLinearLayout.setOrientation(LinearLayout.HORIZONTAL);
-        newLinearLayout.addView(addPlayerNameTextView(index),newLayoutParams);
-        newLinearLayout.addView(addPlayerPointsTextView(index),newLayoutParams);
+        newLinearLayout.addView(addPlayerNameTextView(index), newLayoutParams);
+        newLinearLayout.addView(addPlayerPointsTextView(index), newLayoutParams);
 
-        return  newLinearLayout;
+        return newLinearLayout;
     }
 
     //creation of a Textview for playerName this Textview will return a view that will be used on newChildLinerViewGroup method
-    public View addPlayerNameTextView(int index){
+    public View addPlayerNameTextView(int index) {
 
         TextView newTextView = new TextView(this);
         newTextView.setText(playerRankingList.get(index).getPlayerName());
@@ -64,7 +64,7 @@ public class QuizzRankActivity extends AppCompatActivity {
 
 
     //creation of a Textview for playerPoints this Textview will return a view that will be used on newChildLinerViewGroup method
-    public View addPlayerPointsTextView(int index){
+    public View addPlayerPointsTextView(int index) {
 
         TextView newTextView = new TextView(this);
         newTextView.setText(playerRankingList.get(index).getPlayerPoints());

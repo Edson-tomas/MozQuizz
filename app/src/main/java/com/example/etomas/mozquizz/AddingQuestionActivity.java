@@ -25,14 +25,14 @@ public class AddingQuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adding_question);
     }
 
-    public void firstAnswerTrue(View view){
+    public void firstAnswerTrue(View view) {
 
         is_first_answer_true_cb = findViewById(R.id.id_is_first_answer_true_cb_view);
         is_second_answer_true_cb = findViewById(R.id.id_is_second_answer_true_cb_view);
         is_third_answer_true_cb = findViewById(R.id.id_is_third_answer_true_cb_view);
         is_fourth_answer_true_cb = findViewById(R.id.id_is_fourth_answer_true_cb_view);
 
-        if (is_first_answer_true_cb.isChecked()){
+        if (is_first_answer_true_cb.isChecked()) {
 
             is_second_answer_true_cb.setEnabled(false);
             is_third_answer_true_cb.setEnabled(false);
@@ -42,14 +42,14 @@ public class AddingQuestionActivity extends AppCompatActivity {
 
     }
 
-    public void secondAnswerTrue(View view){
+    public void secondAnswerTrue(View view) {
 
         is_first_answer_true_cb = findViewById(R.id.id_is_first_answer_true_cb_view);
         is_second_answer_true_cb = findViewById(R.id.id_is_second_answer_true_cb_view);
         is_third_answer_true_cb = findViewById(R.id.id_is_third_answer_true_cb_view);
         is_fourth_answer_true_cb = findViewById(R.id.id_is_fourth_answer_true_cb_view);
 
-        if (is_second_answer_true_cb.isChecked()){
+        if (is_second_answer_true_cb.isChecked()) {
 
             is_first_answer_true_cb.setEnabled(false);
             is_third_answer_true_cb.setEnabled(false);
@@ -59,14 +59,14 @@ public class AddingQuestionActivity extends AppCompatActivity {
 
     }
 
-    public void thirdAnswerTrue(View view){
+    public void thirdAnswerTrue(View view) {
 
         is_first_answer_true_cb = findViewById(R.id.id_is_first_answer_true_cb_view);
         is_second_answer_true_cb = findViewById(R.id.id_is_second_answer_true_cb_view);
         is_third_answer_true_cb = findViewById(R.id.id_is_third_answer_true_cb_view);
         is_fourth_answer_true_cb = findViewById(R.id.id_is_fourth_answer_true_cb_view);
 
-        if (is_third_answer_true_cb.isChecked()){
+        if (is_third_answer_true_cb.isChecked()) {
 
             is_first_answer_true_cb.setEnabled(false);
             is_second_answer_true_cb.setEnabled(false);
@@ -76,14 +76,14 @@ public class AddingQuestionActivity extends AppCompatActivity {
 
     }
 
-    public void fourthAnswerTrue(View view){
+    public void fourthAnswerTrue(View view) {
 
         is_first_answer_true_cb = findViewById(R.id.id_is_first_answer_true_cb_view);
         is_second_answer_true_cb = findViewById(R.id.id_is_second_answer_true_cb_view);
         is_third_answer_true_cb = findViewById(R.id.id_is_third_answer_true_cb_view);
         is_fourth_answer_true_cb = findViewById(R.id.id_is_fourth_answer_true_cb_view);
 
-        if (is_fourth_answer_true_cb.isChecked()){
+        if (is_fourth_answer_true_cb.isChecked()) {
 
             is_first_answer_true_cb.setEnabled(false);
             is_second_answer_true_cb.setEnabled(false);
@@ -94,7 +94,7 @@ public class AddingQuestionActivity extends AppCompatActivity {
     }
 
     //create questions and answers, which one is true and add the question to an category
-    public void createQuestion(List<Quizz> question){
+    public void createQuestion(List<Quizz> question) {
 
         add_question_et = findViewById(R.id.id_add_question_et_view);
         add_first_answer_et = findViewById(R.id.id_add_first_answer_et_view);
@@ -115,17 +115,17 @@ public class AddingQuestionActivity extends AppCompatActivity {
 
         //Adding questions to list question
         question.add(new Quizz(
-                add_question_et.getText().toString(),add_category_sp.getSelectedItem().toString(),
-                add_first_answer_et.getText().toString(),is_first_answer_true_cb.isChecked(),
-                add_second_answer_et.getText().toString(),is_second_answer_true_cb.isChecked(),
-                add_third_answer_et.getText().toString(),is_third_answer_true_cb.isChecked(),
-                add_fourth_answer_et.getText().toString(),is_fourth_answer_true_cb.isChecked()
+                add_question_et.getText().toString(), add_category_sp.getSelectedItem().toString(),
+                add_first_answer_et.getText().toString(), is_first_answer_true_cb.isChecked(),
+                add_second_answer_et.getText().toString(), is_second_answer_true_cb.isChecked(),
+                add_third_answer_et.getText().toString(), is_third_answer_true_cb.isChecked(),
+                add_fourth_answer_et.getText().toString(), is_fourth_answer_true_cb.isChecked()
         ));
 
     }
 
     //Clear data
-    public void cleanBoxes(){
+    public void cleanBoxes() {
 
         add_question_et = findViewById(R.id.id_add_question_et_view);
         add_first_answer_et = findViewById(R.id.id_add_first_answer_et_view);
@@ -157,33 +157,38 @@ public class AddingQuestionActivity extends AppCompatActivity {
     }
 
     //will save the data in the form
-    public void saveQuizz(View view){
+    public void saveQuizz(View view) {
 
-        if (add_category_sp.isSelected()){
+        if (add_category_sp.isSelected()) {
 
             add_category_sp.requestFocus();
 
-        }if (add_question_et.getText().toString().isEmpty()){
+        }
+        if (add_question_et.getText().toString().isEmpty()) {
 
             add_question_et.requestFocus();
 
-        }if (add_first_answer_et.getText().toString().isEmpty()){
+        }
+        if (add_first_answer_et.getText().toString().isEmpty()) {
 
             add_first_answer_et.requestFocus();
 
-        }if (add_second_answer_et.getText().toString().isEmpty()){
+        }
+        if (add_second_answer_et.getText().toString().isEmpty()) {
 
             add_second_answer_et.requestFocus();
 
-        }if (add_third_answer_et.getText().toString().isEmpty()){
+        }
+        if (add_third_answer_et.getText().toString().isEmpty()) {
 
             add_third_answer_et.requestFocus();
 
-        }if (add_fourth_answer_et.getText().toString().isEmpty()){
+        }
+        if (add_fourth_answer_et.getText().toString().isEmpty()) {
 
             add_fourth_answer_et.requestFocus();
 
-        }else {
+        } else {
 
             createQuestion(questionList);
             cleanBoxes();
@@ -193,7 +198,7 @@ public class AddingQuestionActivity extends AppCompatActivity {
     }
 
     //will clear the form
-    public void cancelSave(View view){
+    public void cancelSave(View view) {
         cleanBoxes();
     }
 
