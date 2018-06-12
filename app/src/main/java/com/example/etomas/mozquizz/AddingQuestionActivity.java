@@ -205,14 +205,14 @@ public class AddingQuestionActivity extends AppCompatActivity {
             Toast msg = Toast.makeText(this, "The 4th answer is empty.", Toast.LENGTH_LONG);
             msg.show();
 
-        } if (is_first_answer_true_cb.isChecked() &&
+        }
+        if (is_first_answer_true_cb.isChecked() &&
                 is_second_answer_true_cb.isChecked() &&
                 is_third_answer_true_cb.isChecked() &&
-                is_fourth_answer_true_cb.isChecked()){
+                is_fourth_answer_true_cb.isChecked()) {
 
 
-
-        } else{
+        } else {
 
             createQuestion(questionList);
             cleanBoxes();
@@ -221,10 +221,7 @@ public class AddingQuestionActivity extends AppCompatActivity {
 
         }
 
-        Intent questionsListIntent = new Intent(AddingQuestionActivity.this, MathematicsActivity.class);
-        Bundle questionsListBundle = new Bundle();
-        questionsListBundle.putParcelableArrayList("arrayListOfQuestions", questionList);
-        questionsListIntent.putExtras(questionsListBundle);
+        sendingDataToMathActivity(questionList);
 
     }
 
@@ -234,4 +231,12 @@ public class AddingQuestionActivity extends AppCompatActivity {
     }
 
 
+    public void sendingDataToMathActivity(ArrayList<Quizz> quizzArrayList) {
+
+        Intent questionsListIntent = new Intent(AddingQuestionActivity.this, MathematicsActivity.class);
+        Bundle questionsListBundle = new Bundle();
+        questionsListBundle.putParcelableArrayList("arrayListOfQuestions", quizzArrayList);
+        questionsListIntent.putExtras(questionsListBundle);
+
+    }
 }
