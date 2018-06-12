@@ -25,6 +25,8 @@ public class AddingQuestionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adding_question);
+
+        populatingTheSpinner();
     }
 
     public void firstAnswerTrue(View view) {
@@ -110,10 +112,6 @@ public class AddingQuestionActivity extends AppCompatActivity {
         is_fourth_answer_true_cb = findViewById(R.id.id_is_fourth_answer_true_cb_view);
 
         add_category_sp = findViewById(R.id.id_add_category_sp_view);
-
-        //Add items to spinner from an array
-        ArrayAdapter<CharSequence> add_category_sp_adapter = ArrayAdapter.createFromResource(this, R.array.quizz_category, R.layout.support_simple_spinner_dropdown_item);
-        add_category_sp.setAdapter(add_category_sp_adapter);
 
         //Adding questions to list question
         question.add(new Quizz(
@@ -238,5 +236,14 @@ public class AddingQuestionActivity extends AppCompatActivity {
         questionsListBundle.putParcelableArrayList("arrayListOfQuestions", quizzArrayList);
         questionsListIntent.putExtras(questionsListBundle);
 
+    }
+
+    public void populatingTheSpinner(){
+
+        add_category_sp = findViewById(R.id.id_add_category_sp_view);
+
+        //Add items to spinner from an array
+        ArrayAdapter<CharSequence> add_category_sp_adapter = ArrayAdapter.createFromResource(this, R.array.quizz_category, R.layout.support_simple_spinner_dropdown_item);
+        add_category_sp.setAdapter(add_category_sp_adapter);
     }
 }
