@@ -1,8 +1,11 @@
 package com.example.etomas.mozquizz;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.BitSet;
 
-public class Quizz {
+public class Quizz implements Parcelable{
 
     private String question;
     private String questionCategory;
@@ -19,6 +22,17 @@ public class Quizz {
     public Quizz() {
     }
 
+    public Quizz(Parcel in){
+        question = in.readString();
+        answer_1 = in.readString();
+        forAnswer_1 =in.readByte()!=0;
+        answer_2 = in.readString();
+        forAnswer_2 =in.readByte()!=0;
+        answer_3 = in.readString();
+        forAnswer_3 =in.readByte()!=0;
+        answer_4 = in.readString();
+        forAnswer_4 =in.readByte()!=0;
+    }
     public Quizz(String question, String questionCategory, String answer_1, Boolean forAnswer_1, String answer_2, Boolean forAnswer_2, String answer_3, Boolean forAnswer_3, String answer_4, Boolean forAnswer_4) {
         this.question = question;
         this.questionCategory = questionCategory;
@@ -133,4 +147,37 @@ public class Quizz {
     public void setQuestionCategory(String questionCategory) {
         this.questionCategory = questionCategory;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
+        dest.writeString(question);
+        dest.writeString(answer_1);
+        dest.writeByte((byte)(forAnswer_1?1:0));
+        dest.writeString(answer_2);
+        dest.writeByte((byte)(forAnswer_2?1:0));
+        dest.writeString(answer_3);
+        dest.writeByte((byte)(forAnswer_3?1:0));
+        dest.writeString(answer_4);
+        dest.writeByte((byte)(forAnswer_4?1:0));
+
+    }
+
+    public static final Parcelable.Creator<Quizz> CREATOR = new Parcelable.Creator<Quizz>(){
+
+        public Quizz createFromParcel(Parcel in){
+            return new Quizz(in);
+        }
+
+        @Override
+        public Quizz[] newArray(int size) {
+            return new Quizz[size];
+        }
+
+    };
 }

@@ -1,5 +1,6 @@
 package com.example.etomas.mozquizz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,13 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AddingQuestionActivity extends AppCompatActivity {
 
-    public List<Quizz> questionList = new ArrayList<>();
+    public ArrayList<Quizz> questionList = new ArrayList<>();
     private CheckBox is_first_answer_true_cb, is_second_answer_true_cb, is_third_answer_true_cb, is_fourth_answer_true_cb;
     private EditText add_question_et, add_first_answer_et, add_second_answer_et, add_third_answer_et, add_fourth_answer_et;
     private Spinner add_category_sp;
@@ -124,6 +126,7 @@ public class AddingQuestionActivity extends AppCompatActivity {
 
     }
 
+
     //Clear data
     public void cleanBoxes() {
 
@@ -163,37 +166,65 @@ public class AddingQuestionActivity extends AppCompatActivity {
 
             add_category_sp.requestFocus();
 
+            Toast msg = Toast.makeText(this, "Select a question Category", Toast.LENGTH_LONG);
+            msg.show();
+
+
         }
         if (add_question_et.getText().toString().isEmpty()) {
 
             add_question_et.requestFocus();
+            Toast msg = Toast.makeText(this, "The field is empty.", Toast.LENGTH_LONG);
+            msg.show();
 
         }
         if (add_first_answer_et.getText().toString().isEmpty()) {
 
             add_first_answer_et.requestFocus();
+            Toast msg = Toast.makeText(this, "The 1st answer is empty", Toast.LENGTH_LONG);
+            msg.show();
 
         }
         if (add_second_answer_et.getText().toString().isEmpty()) {
 
             add_second_answer_et.requestFocus();
+            Toast msg = Toast.makeText(this, "The 2nd answer is empty.", Toast.LENGTH_LONG);
+            msg.show();
 
         }
         if (add_third_answer_et.getText().toString().isEmpty()) {
 
             add_third_answer_et.requestFocus();
+            Toast msg = Toast.makeText(this, "The 3rd answer is Empty", Toast.LENGTH_LONG);
+            msg.show();
 
         }
         if (add_fourth_answer_et.getText().toString().isEmpty()) {
 
             add_fourth_answer_et.requestFocus();
+            Toast msg = Toast.makeText(this, "The 4th answer is empty.", Toast.LENGTH_LONG);
+            msg.show();
 
-        } else {
+        } if (is_first_answer_true_cb.isChecked() &&
+                is_second_answer_true_cb.isChecked() &&
+                is_third_answer_true_cb.isChecked() &&
+                is_fourth_answer_true_cb.isChecked()){
+
+
+
+        } else{
 
             createQuestion(questionList);
             cleanBoxes();
+            Toast msg = Toast.makeText(this, "Saving...", Toast.LENGTH_LONG);
+            msg.show();
 
         }
+
+        Intent questionsListIntent = new Intent(AddingQuestionActivity.this, MathematicsActivity.class);
+        Bundle questionsListBundle = new Bundle();
+        questionsListBundle.putParcelableArrayList("arrayListOfQuestions", questionList);
+        questionsListIntent.putExtras(questionsListBundle);
 
     }
 
